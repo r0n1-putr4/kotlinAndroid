@@ -16,15 +16,13 @@ class MenuActivity : AppCompatActivity() {
         val toolbarMenu = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbarMenu)
 
+        val coba = intent.getStringExtra("coba")
+
         supportActionBar?.apply {
-            title = "Toolbar Back Button Example"
+            title = coba
             setDisplayHomeAsUpEnabled(true)
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
 
     }
 

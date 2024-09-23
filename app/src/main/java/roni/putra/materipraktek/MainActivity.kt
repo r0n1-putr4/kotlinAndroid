@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         btnProses.setOnClickListener {
             val intent = Intent(this@MainActivity,MenuActivity::class.java)
-            intent.putExtra("","")
+            intent.putExtra("coba","roni putra")
             startActivity(intent)
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
